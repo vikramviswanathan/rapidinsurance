@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RapidQube Employment Contract</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>RapidQube Employment Contract</h1>
+  <h3>Employer Balance: You have <span class="black"><span id="balance"></span> ETHER</span></h3>
+  <h1>Add Employment Contract</h1>
+  <br><label for="employeeAddress">Employee Address:</label><input type="text" id="employeeAddress" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><label for="employeeSalary">Employee Salary:</label><input type="text" id="employeeSalary" placeholder="e.g., 1000"></input>
+  <br><br><button id="addContract" onclick="App.addContract();window.location.reload();">Add Contract</button>
+  <br>
+  <br>
+  <h1>Get Employment Contract</h1>
+  <br><label for="empAddress">Employee Address:</label><input type="text" id="empAddress" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="getContract" onclick="App.getContract()">Get Contract</button>
+  <p>Employee salary is: <span class="black"><span id="getSalary"></span> ETHER</span></p>
+  <br>
+  <br>
+  <h1>Remove Employment Contract</h1>
+  <br><label for="removeAddress">Employee Address:</label><input type="text" id="removeAddress" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="removeContract" onclick="App.removeContract();window.location.reload();">Remove Contract</button>
+  <br>
+  <br>
+  <h1>Send Ether</h1>
+  <br><label for="amount">Salary Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="pay" onclick="App.sendCoin()">Send Ether</button>
+  <br><br>
+  <h1>Check Balance</h1>
+  <br><label for="empBalanceAdd">Employee Address:</label><input type="text" id="employeeAdd" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="checkBalance" onclick="App.checkBalance()">Check Balance</button>
+  <p>Employee balance is: <span class="black"><span id="empBalance"></span> ETHER</span></p>
+  <br>
+  <br>
+  <h1>Get Transaction History</h1>
+  <br><label for="empHistoryAdd">Employee History:</label><input type="text" id="empHistoryAdd" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><br><button id="getHistory" onclick="App.getTransactionsByAccount()">Get History</button>
+  <p>Employee Transaction History is: <span class="black"><span id="empHistory"></span></span></p>
+  <br>
+  <br>
+  <span id="status"></span>
+  <br>
+</body>
+</html>
