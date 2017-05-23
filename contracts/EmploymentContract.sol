@@ -28,9 +28,11 @@ contract EmploymentContract {
     function sendCoin(address receiver, uint amount) returns(bool sufficient) {
     if (balances[msg.sender] == 0) return false;
     if (balances[msg.sender] < amount) return false;
-		balances[msg.sender] -= amount;
+    if (amount == employmentContracts[receiver]) {
+    balances[msg.sender] -= amount;
 		balances[receiver] += amount;
 		return true;
+    } else {return false; }
 	}
 
     function getBalance(address addr) returns(uint) {
